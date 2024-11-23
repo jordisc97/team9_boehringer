@@ -1,0 +1,4 @@
+Patient,Weeks,FVC,Percent,Age,Sex,SmokingStatus,WHERE,Confidence,Patient_Week,min_week,min_FVC,base_week,ImagePath,Label
+ID00007637202177411956430,-4,2315.0,58.253649,79.0,Male,Ex-smoker,train,,,-4.0,2315.0,0.0,./images/example1.png,1
+ID00009637202177434462384,3,2500.0,75.123456,65.0,Female,Never smoked,train,,,-3.0,2450.0,6.0,./images/example2.png,0
+ID00010637202177584929622,10,1800.0,40.234567,50.0,Male,Currently smokes,train,,,-2.0,1900.0,12.0,./images/example3.png,1
