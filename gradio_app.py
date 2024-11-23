@@ -22,7 +22,7 @@ def predict_image(patient_id, age, fvc, sex, smoking_status, min_fvc):
         min_fvc (float): Minimum FVC of the patient.
 
     Returns:
-        dict: Predictions from each vision model.
+        tuple: Predictions from each vision model and the patient image.
     """
     # Retrieve the image path for the patient
     image_path = data.loc[data['Patient'] == patient_id, 'ImagePath'].values[0]
@@ -32,12 +32,14 @@ def predict_image(patient_id, age, fvc, sex, smoking_status, min_fvc):
     squeezenet_pred, _, squeezenet_probs = squeezenet_model.predict(image_path)
     densenet_pred, _, densenet_probs = densenet_model.predict(image_path)
 
-    # Return predictions for each model
-    return {
+    # Return predictions and the image path
+    predictions = {
         "ResNet34 Probability": round(resnet_probs[1].item(), 4),
         "SqueezeNet Probability": round(squeezenet_probs[1].item(), 4),
         "DenseNet Probability": round(densenet_probs[1].item(), 4),
     }
+
+    return predictions, image_path
 
 # Gradio Inputs
 inputs = [
@@ -52,22 +54,27 @@ inputs = [
 # Gradio Outputs
 outputs = [
     gr.Label(label="Model Predictions"),
+    gr.Image(label="Patient Image"),
 ]
 
 # Gradio Examples
 examples = [
-    ["ID00007637202177411956430", 79, 2315.0, "Male", "Ex-smoker", 2315.0],
-    ["ID00009637202177434462384", 65, 2500.0, "Female", "Never smoked", 2450.0],
-    ["ID00010637202177584929622", 50, 1800.0, "Male", "Currently smokes", 1900.0],
+    ["ID00038637202182690843176", 79, 2315.0, "Male", "Ex-smoker", 2315.0],
+    ["ID00010637202177584971671", 65, 2500.0, "Female", "Never smoked", 2450.0],
+    ["ID00061637202188184085559", 50, 1800.0, "Male", "Currently smokes", 1900.0],
 ]
 
 # Gradio Interface
+custom_theme = gr.themes.Soft(
+    primary_hue="green",  # Sets the primary color to green
+)
+
 gr.Interface(
     fn=predict_image,
     inputs=inputs,
     outputs=outputs,
     examples=examples,
     title="Pulmonary Fibrosis Image Prediction",
-    description="This app predicts the probability of pulmonary fibrosis using pre-trained vision models and patient features. Select a patient ID and provide metadata to get predictions.",
-    theme=gr.themes.Soft(),
-).launch()
+    description="This app predicts the probability of pulmonary fibrosis using pre-trained vision models and patient features. Select a patient ID and provide metadata to get predictions. The corresponding patient image will also be displayed.",
+    theme=custom_theme,
+).launch(share=True)
