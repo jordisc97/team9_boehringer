@@ -1,0 +1,2 @@
+Patient ID,Age,FVC (Forced Vital Capacity),Sex,Smoking Status,Minimum FVC,Model Predictions,Patient Image,timestamp
+,20,500,,,500,"{""label"": null, ""confidences"": null}",,2024-11-23 18:21:13.431908
