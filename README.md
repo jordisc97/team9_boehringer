@@ -12,3 +12,29 @@ This project aims to assist radiologists in detecting **Idiopathic Pulmonary Fib
 - **User-Friendly Interface:** Easy integration into radiologists' workflows.  
 
 ---
+
+Machine Learning Part:
+  - Kaggle Data + Clinical Data Sources
+      ↓
+  - Advanced Threshold-Based Segmentation (Dynamic FVC Clustering)
+      ↓
+  - Train CV Model (with Explainability Features)
+      ↓
+  - ML Regression for Patient Data Integration
+      ↓
+  - Merge Outputs for Final Probability Scoring
+      ↓
+  - LLM for Clinical Report Generation
+
+App Interface:
+  - Input: CT Scans + Patient Data
+      ↓
+  - Processing: Probability Calculation + LLM Summary
+      ↓
+  - Output: 
+      - Final Probability (e.g., "82%")
+      - LLM-Generated Report
+      - Visual Highlights on CT Scans
+
+---
+
