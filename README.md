@@ -1,5 +1,9 @@
 # 🚀 Asistente de Diagnóstico para Fibrosis Pulmonar Idiopática
 
+Haz clic en la imagen a continuación para ver una **demostración** de la aplicación en YouTube:
+
+[![Ver la demostración en YouTube](https://img.youtube.com/vi/kS4T7r7cydg/0.jpg)](https://www.youtube.com/watch?v=kS4T7r7cydg)
+
 ## 📜 **Descripción del Proyecto**
 Los médicos clínicos enfrentan una alta carga de trabajo al tratar de identificar y manejar pacientes con posibles enfermedades pulmonares como la **Fibrosis Pulmonar Idiopática (FPI)**. Este proyecto tiene como objetivo proporcionar una herramienta basada en **data-driven decision-making** que los ayude a tomar decisiones más ágiles y fundamentadas. La herramienta puede analizar datos clínicos e imágenes para determinar si un paciente debería:
 
