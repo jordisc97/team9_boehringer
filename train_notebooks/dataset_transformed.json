@@ -1,0 +1,152 @@
+[
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "women",
+            "age": 64,
+            "condition": "ex-smoker",
+            "probability": 0.89
+        },
+        "output": "Given that this is a 64-year-old woman who is an ex-smoker, the pathology appears evident with an 89% probability. Immediate medical intervention is recommended."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "women",
+            "age": 42,
+            "condition": "never smoked",
+            "probability": 0.18
+        },
+        "output": "Given that this is a 42-year-old woman who has never smoked, there is no clear evidence of IPF with an 18% probability. Further monitoring may be necessary, but no immediate action is recommended."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "men",
+            "age": 74,
+            "condition": "smoker",
+            "probability": 0.85
+        },
+        "output": "Given that this is a 74-year-old man who is a smoker, the pathology appears evident with an 85% probability. Immediate medical intervention is recommended."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "men",
+            "age": 68,
+            "condition": "ex-smoker",
+            "probability": 0.72
+        },
+        "output": "Given that this is a 68-year-old man who is an ex-smoker, there is significant evidence of IPF with a 72% probability. The doctor should evaluate the patient for potential risks."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "women",
+            "age": 26,
+            "condition": "ex-smoker",
+            "probability": 0.12
+        },
+        "output": "Given that this is a 26-year-old woman who is an ex-smoker, there is no clear evidence of IPF with a 12% probability. Further monitoring may be necessary, but no immediate action is recommended."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "women",
+            "age": 72,
+            "condition": "smoker",
+            "probability": 0.93
+        },
+        "output": "Given that this is a 72-year-old woman who is a smoker, the pathology appears evident with a 93% probability. Immediate medical intervention is recommended."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "men",
+            "age": 84,
+            "condition": "smoker",
+            "probability": 0.99
+        },
+        "output": "Given that this is an 84-year-old man who is a smoker, the pathology appears extremely evident with a 99% probability. Immediate medical intervention is crucial. A lung transplant should be prioritized. If not viable, palliative care must be discussed."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "men",
+            "age": 58,
+            "condition": "never smoked",
+            "probability": 0.43
+        },
+        "output": "Given that this is a 58-year-old man who has never smoked, there is significant evidence of IPF with a 43% probability. The doctor should further evaluate the patient."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "women",
+            "age": 49,
+            "condition": "ex-smoker",
+            "probability": 0.56
+        },
+        "output": "Given that this is a 49-year-old woman who is an ex-smoker, there is significant evidence of IPF with a 56% probability. The doctor should further evaluate the patient for potential risks."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "men",
+            "age": 67,
+            "condition": "smoker",
+            "probability": 0.91
+        },
+        "output": "Given that this is a 67-year-old man who is a smoker, the pathology appears evident with a 91% probability. Immediate medical intervention is recommended."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "women",
+            "age": 34,
+            "condition": "never smoked",
+            "probability": 0.3
+        },
+        "output": "Given that this is a 34-year-old woman who has never smoked, there is no clear evidence of IPF with a 30% probability. Further monitoring may be necessary, but no immediate action is recommended."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "men",
+            "age": 51,
+            "condition": "smoker",
+            "probability": 0.78
+        },
+        "output": "Given that this is a 51-year-old man who is a smoker, there is significant evidence of IPF with a 78% probability. The doctor should further evaluate the patient for potential risks."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "women",
+            "age": 66,
+            "condition": "ex-smoker",
+            "probability": 0.82
+        },
+        "output": "Given that this is a 66-year-old woman who is an ex-smoker, the pathology appears evident with an 82% probability. Immediate medical intervention is recommended."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "women",
+            "age": 75,
+            "condition": "smoker",
+            "probability": 0.45
+        },
+        "output": "Given that this is a 75-year-old woman who is a smoker, there is significant evidence of IPF with a 45% probability. The doctor should evaluate the patient for potential risks."
+    },
+    {
+        "instruction": "You are a support tool designed to assist doctors in assessing whether a patient may have Idiopathic Pulmonary Fibrosis (IPF). Your task is to provide a concise report based on the patient's data and test results. Use the patient's specific data to contextualize your response. Follow these rules: <0.4: 'No clear evidence, further monitoring may be necessary.' >0.4 and <0.8: 'Significant evidence, evaluation needed.' >0.8: 'Pathology evident, immediate intervention recommended. Consider lung transplant or palliative care if necessary.'",
+        "input": {
+            "sex": "men",
+            "age": 45,
+            "condition": "ex-smoker",
+            "probability": 0.23
+        },
+        "output": "Given that this is a 45-year-old man who is an ex-smoker, there is no clear evidence of IPF with a 23% probability. Further monitoring may be necessary, but no immediate action is recommended."
+    }
+]
