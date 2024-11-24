@@ -1,18 +1,19 @@
 name: fibrosis_pulmonar_env
 channels:
   - defaults
-  - pytorch
   - conda-forge
 dependencies:
-  - python=3.9
-  - numpy
-  - pandas
-  - scikit-learn
-  - lightgbm
-  - pillow
-  - pydicom
-  - imageio
-  - fastai
-  - pytorch
-  - torchvision
-  - gradio
+  - python=3.10
+  - numpy=2.0.2
+  - pandas=2.2.3
+  - scikit-learn=1.5.2
+  - pytorch=2.5.1
+  - torchvision=0.20.1
+  - pip
+  - pip:
+      - gradio==5.4.0
+      - fastai==2.7.18
+      - lightgbm==4.5.0
+      - pillow==11.0.0
+      - pydicom==3.0.1
+      - imageio==2.36.0
