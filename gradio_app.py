@@ -66,14 +66,26 @@ def predict_image(patient_id, age, fvc, sex, smoking_status, base_week):
     # Make prediction using the LightGBM model
     final_prob = lgb_model.predict(features)[0]
 
+    # Convert final probability to percentage
+    final_prob_percentage = round(final_prob * 100, 2)
+
     # Determine risk message
-    risk_message = ("Patient at High Risk: Please consider more frequent monitoring" 
-                    if final_prob > 0.6 
-                    else "Patient at Low Risk: Routine monitoring is sufficient"
-                    )
-    
-    # Return final probability, risk message, and the image path
-    return round(final_prob, 4), risk_message, image_path
+    if final_prob > 0.6:
+        risk_message = '<h2 style="color:red;">**Patient at High Risk: Please consider more frequent monitoring**</h2>'
+    else:
+        risk_message = '<h2 style="color:green;">**Patient at Low Risk: Routine monitoring is sufficient**</h2>'
+
+    # Create Markdown output
+    markdown_output = f"""
+    <br><br><br>
+    <div style="text-align:center;">
+    <h1>Probability: {final_prob_percentage}%</h1>
+    {risk_message}
+    </div>
+    <br><br>
+    """
+    # Return Markdown output and image path
+    return markdown_output, image_path
 
 # Gradio Inputs
 inputs = [
@@ -87,21 +99,20 @@ inputs = [
 
 # Gradio Outputs
 outputs = [
-    gr.Number(label="Final Probability"),
-    gr.Text(label="Risk Assessment"),
+    gr.Markdown(label="Prediction Result"),
     gr.Image(label="Patient Image"),
 ]
 
 # Gradio Examples
 examples = [
     ["ID00038637202182690843176", 79, 2315.0, "Male", "Ex-smoker", 0],
-    ["ID00010637202177584971671", 65, 2500.0, "Female", "Never smoked", 6],
+    ["ID00010637202177584971671", 65, 2500.0, "Female", "Never smoked", -12],
     ["ID00061637202188184085559", 50, 1800.0, "Male", "Currently smokes", 5],
 ]
 
 # Gradio Interface
 custom_theme = gr.themes.Soft(
-    primary_hue="green",  # Sets the primary color to green
+    primary_hue="green",
 )
 
 gr.Interface(
@@ -109,9 +120,10 @@ gr.Interface(
     inputs=inputs,
     outputs=outputs,
     examples=examples,
-    title="Pulmonary Fibrosis Image Prediction",
-    description="This app predicts the probability of pulmonary fibrosis using pre-trained vision models and patient features. Select a patient ID and provide metadata to get predictions. The corresponding patient image will also be displayed.",
+    title="Pulmonary Fibrosis Prediction",
+    description=(
+        "This app predicts the probability of pulmonary fibrosis using a combined model of pre-trained vision models and patient features. "
+        "Select a patient ID and provide metadata to get the final probability. The corresponding patient image will also be displayed."
+    ),
     theme=custom_theme,
-).launch(
-    # share=True
-    )
+).launch(share=True)
