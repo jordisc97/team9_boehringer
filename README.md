@@ -1,19 +1,19 @@
 # 🚀 Asistente de Diagnóstico para Fibrosis Pulmonar Idiopática
 
 ## 📜 **Descripción del Proyecto**
-Los médicos clínicos enfrentan una alta carga de trabajo al tratar de identificar y manejar pacientes con posibles enfermedades pulmonares como la **Fibrosis Pulmonar Idiopática (FPI)**. Este proyecto tiene como objetivo proporcionar una herramienta basada en **data-driven decision-making** que los ayude a tomar decisiones más ágiles y fundamentadas. La herramienta puede analizar datos clínicos y de imágenes para determinar si un paciente debería:
+Los médicos clínicos enfrentan una alta carga de trabajo al tratar de identificar y manejar pacientes con posibles enfermedades pulmonares como la **Fibrosis Pulmonar Idiopática (FPI)**. Este proyecto tiene como objetivo proporcionar una herramienta basada en **data-driven decision-making** que los ayude a tomar decisiones más ágiles y fundamentadas. La herramienta puede analizar datos clínicos e imágenes para determinar si un paciente debería:
 
 - Ser seguido más de cerca.
 - Derivado a un especialista.
-- Continuar con el monitoreo habitual.
+- Continuar con el seguimiento habitual.
 
-Al utilizar esta solución, se busca optimizar el tiempo de los médicos, priorizar los casos más urgentes y mejorar el manejo clínico de los pacientes.
+Al utilizar esta solución, se busca optimizar el tiempo de diagnostico, priorizar los casos más urgentes y mejorar el manejo clínico de los pacientes.
 
 ## 🎯 **Objetivo del Proyecto**
 - Asistir a los médicos en la priorización de pacientes mediante análisis de datos clínicos y de imágenes.
 - Identificar patrones sutiles que indiquen mayor riesgo de FPI.
 - Generar recomendaciones basadas en el riesgo para apoyar la toma de decisiones clínicas.
-- Mejorar la eficiencia y precisión en la identificación de pacientes que necesitan monitoreo intensivo o derivación.
+- Mejorar la eficiencia y precisión en la identificación de pacientes que necesitan seguimiento intensivo o derivación.
 
 ## 🛠️ **Enfoque y Solución**
 La solución implementada es una aplicación web construida con **Gradio** que integra modelos de aprendizaje profundo y machine learning para analizar imágenes y datos clínicos del paciente.
