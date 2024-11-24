@@ -40,8 +40,8 @@ La solución implementada es una aplicación web construida con **Gradio** que i
 ### 📥 **Instalación**
 Clonar el repositorio:
 ```bash
-git clone https://github.com/tu_usuario/tu_repositorio.git
-cd tu_repositorio
+git clone https://github.com/jordisc97/team9_boehringer.git
+cd team9_boehringer
 ```
 Crear y activar el entorno conda:
 ```bash
