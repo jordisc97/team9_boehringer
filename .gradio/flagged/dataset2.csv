@@ -1,0 +1,5 @@
+Patient ID,Age,FVC (Forced Vital Capacity),Sex,Smoking Status,Base Week,Prediction Result,Patient Image,timestamp
+ID00038637202182690843176,79,2315,Male,Ex-smoker,0,"<div style=""text-align:center;"">
+<h1>Probability: 5.63%</h1>
+<h2 style=""color:green;"">**Patient at Low Risk: Routine monitoring is sufficient**</h2>
+</div>",.gradio/flagged/Patient Image/1b5a0f609d39700fc395/ID00038637202182690843176_animation.gif,2024-11-24 10:57:21.870586

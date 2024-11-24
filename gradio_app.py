@@ -3,6 +3,9 @@ import pandas as pd
 from fastai.vision.all import load_learner
 import lightgbm as lgb
 
+from src.utils import AnimateScans
+import os
+
 # Load the LightGBM model
 lgb_model = lgb.Booster(model_file='./models/lgbm_model.txt')
 
@@ -77,15 +80,27 @@ def predict_image(patient_id, age, fvc, sex, smoking_status, base_week):
 
     # Create Markdown output
     markdown_output = f"""
-    <br><br><br>
     <div style="text-align:center;">
     <h1>Probability: {final_prob_percentage}%</h1>
     {risk_message}
     </div>
-    <br><br>
     """
-    # Return Markdown output and image path
-    return markdown_output, image_path
+
+    # Generate GIF animation from DICOM images
+    dicom_folder = os.path.join('./dicom', patient_id)
+    animator = AnimateScans(dicom_folder, duration=1)
+
+    # Ensure the animations directory exists
+    os.makedirs('animations', exist_ok=True)
+
+    # Define the path to save the GIF animation
+    gif_path = os.path.join('animations', f'{patient_id}_animation.gif')
+
+    # Create the GIF animation and save it
+    animator.show_animation(gif_path=gif_path)
+
+    # Return Markdown output and GIF path instead of image_path
+    return markdown_output, gif_path
 
 # Gradio Inputs
 inputs = [
