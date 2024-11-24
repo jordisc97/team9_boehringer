@@ -77,4 +77,6 @@ gr.Interface(
     title="Pulmonary Fibrosis Image Prediction",
     description="This app predicts the probability of pulmonary fibrosis using pre-trained vision models and patient features. Select a patient ID and provide metadata to get predictions. The corresponding patient image will also be displayed.",
     theme=custom_theme,
-).launch(share=True)
+).launch(
+    # share=True
+    )
