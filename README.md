@@ -21,6 +21,7 @@ La solución implementada es una aplicación web construida con **Gradio** que i
 ### 🧩 **Componentes Clave**
 - **Modelos de Visión por Computadora Pre-entrenados**: Se utilizaron modelos como ResNet34, SqueezeNet y DenseNet121 para extraer características de las imágenes de tomografías computarizadas.
 - **Modelo LightGBM**: Un modelo de LightGBM se entrenó utilizando las probabilidades de los modelos de visión y características clínicas para predecir la probabilidad de FPI.
+- **Llama 3 Model**: Modelo LLM que se usa para agrupar todos los outputs en un mensaje en lenguaja natural, para que paciente y medico se entiendan.
 - **Generación de Animaciones**: Se creó la clase `AnimateScans` para generar animaciones GIF de las tomografías, facilitando la visualización dinámica de las imágenes.
 
 ## 📂 **Estructura del Proyecto**
