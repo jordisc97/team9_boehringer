@@ -73,7 +73,7 @@ def predict_image(patient_id, age, fvc, sex, smoking_status, base_week):
     final_prob_percentage = round(final_prob * 100, 2)
 
     # Determine risk message
-    if final_prob > 0.6:
+    if final_prob > 0.7:
         risk_message = '<h2 style="color:red;">**Patient at High Risk: Please consider more frequent monitoring**</h2>'
     else:
         risk_message = '<h2 style="color:green;">**Patient at Low Risk: Routine monitoring is sufficient**</h2>'
@@ -119,10 +119,16 @@ outputs = [
 ]
 
 # Gradio Examples
+# examples = [
+#     ["ID00038637202182690843176", 79, 2315.0, "Male", "Ex-smoker", 0],
+#     ["ID00010637202177584971671", 65, 2500.0, "Female", "Never smoked", -12],
+#     ["ID00061637202188184085559", 50, 1800.0, "Male", "Currently smokes", 5],
+# ]
+
 examples = [
-    ["ID00038637202182690843176", 79, 2315.0, "Male", "Ex-smoker", 0],
-    ["ID00010637202177584971671", 65, 2500.0, "Female", "Never smoked", -12],
-    ["ID00061637202188184085559", 50, 1800.0, "Male", "Currently smokes", 5],
+    ["ID00038637202182690843176", 71, 3946, "Male", "Ex-smoker", 36],
+    ["ID00010637202177584971671", 65, 2500, "Male", "Currently smokes", 25],
+    ["ID00061637202188184085559", 68, 3969, "Male", "Ex-smoker", 48],
 ]
 
 # Gradio Interface
@@ -135,7 +141,7 @@ gr.Interface(
     inputs=inputs,
     outputs=outputs,
     examples=examples,
-    title="Pulmonary Fibrosis Prediction",
+    title="LungHelp: Pulmonary Fibrosis Assessment",
     description=(
         "This app predicts the probability of pulmonary fibrosis using a combined model of pre-trained vision models and patient features. "
         "Select a patient ID and provide metadata to get the final probability. The corresponding patient image will also be displayed."
